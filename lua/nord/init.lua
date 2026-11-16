@@ -1,6 +1,5 @@
 local o = vim.o
 local g = vim.g
-local cmd = vim.cmd
 
 local M = {}
 
@@ -67,11 +66,11 @@ M.load = function()
 
     -- reset colors
     if g.colors_name then
-        cmd("hi clear")
+        vim.cmd("hi clear")
     end
 
     if vim.fn.exists("syntax_on") then
-        cmd("syntax reset")
+        vim.cmd("syntax reset")
     end
 
     o.background = "dark"
