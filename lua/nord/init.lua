@@ -33,9 +33,9 @@ local function apply_term_colors(colors)
 end
 
 local function apply(opts)
-    local colors = require("vaporwave.palette")
+    local colors = require("nord.palette")
     apply_term_colors(colors)
-    local groups = require("vaporwave.groups").setup()
+    local groups = require("nord.groups").setup()
 
     -- apply transparents
     if opts.transparent then
@@ -61,7 +61,7 @@ end
 
 M.load = function()
     if vim.fn.has("nvim-0.10") ~= 1 then
-        vim.notify("vaporwave.nvim: you must use neovim 0.10 or higher")
+        vim.notify("nord.nvim: you must use neovim 0.10 or higher")
         return
     end
 
@@ -76,7 +76,7 @@ M.load = function()
 
     o.background = "dark"
     o.termguicolors = true
-    g.colors_name = "vaporwave"
+    g.colors_name = "nord"
 
     apply(M.opts)
 end
