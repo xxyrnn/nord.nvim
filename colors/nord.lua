@@ -1,1 +1,1 @@
-require("vaporwave").load()
+require("nord").load()
