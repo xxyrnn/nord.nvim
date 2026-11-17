@@ -1,6 +1,6 @@
 local M = {}
 
-local colors = require("vaporwave.palette")
+local colors = require("nord.palette")
 
 M.setup = function()
     return {
